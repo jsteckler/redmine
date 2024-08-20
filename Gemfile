@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '>= 3.0.0', '< 3.4.0'
+ruby '>= 3.1.0', '< 3.4.0'
 
-gem 'rails', '7.1.2'
+gem 'rails', '7.2.0'
 gem 'rouge', '~> 4.2'
 gem 'mini_mime', '~> 1.1.0'
 gem "actionpack-xml_parser"
@@ -62,34 +62,6 @@ end
 # configuration file
 require 'erb'
 require 'yaml'
-# database_file = File.join(File.dirname(__FILE__), "config/database.yml")
-# if File.exist?(database_file)
-#   yaml_config = ERB.new(IO.read(database_file)).result
-#   database_config = YAML.respond_to?(:unsafe_load) ? YAML.unsafe_load(yaml_config) : YAML.load(yaml_config)
-#   adapters = database_config.values.filter_map {|c| c['adapter']}.uniq
-#   if adapters.any?
-#     adapters.each do |adapter|
-#       case adapter
-#       when 'mysql2'
-#         gem 'mysql2', '~> 0.5.0'
-#         gem "with_advisory_lock"
-#       when /postgresql/
-#         gem 'pg', '~> 1.5.3'
-#       when /sqlite3/
-#         gem 'sqlite3', '~> 1.7.0'
-#       when /sqlserver/
-#         gem 'tiny_tds', '~> 2.1.2'
-#         gem 'activerecord-sqlserver-adapter', '~> 7.1.2'
-#       else
-#         warn("Unknown database adapter `#{adapter}` found in config/database.yml, use Gemfile.local to load your own database gems")
-#       end
-#     end
-#   else
-#     warn("No adapter found in config/database.yml, please configure it first")
-#   end
-# else
-#   warn("Please configure your config/database.yml first")
-# end
 
 group :development, :test do
   gem 'debug'
